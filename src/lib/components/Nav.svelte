@@ -1,4 +1,5 @@
 <script lang="ts">
+	import { base } from '$app/paths';
 	import { page } from '$app/state';
 	let { name }: { name: string } = $props();
 
@@ -11,10 +12,10 @@
 
 <nav>
 	<div class="nav-inner">
-		<a href="/" class="nav-logo">{name}</a>
+		<a href="{base}/" class="nav-logo">{name}</a>
 		<div class="nav-links">
 			{#each links as link}
-				<a href={link.href} class:active={page.url.pathname === link.href}>{link.label}</a>
+				<a href="{base}{link.href}" class:active={page.url.pathname === `${base}${link.href}`}>{link.label}</a>
 			{/each}
 		</div>
 	</div>
