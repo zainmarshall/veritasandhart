@@ -1,0 +1,224 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8"/>
+<meta name="viewport" content="width=device-width, initial-scale=1"/>
+<title>Veritas & Hart — Logo Concepts</title>
+<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@400;500;600;700&family=Inter:wght@400;500;600&family=Jost:wght@300;400;500&display=swap" rel="stylesheet"/>
+<style>
+  :root {
+    --text: hsl(247, 75%, 5%);
+    --bg: hsl(42, 50%, 92%);
+    --primary: hsl(155, 40%, 17%);
+    --secondary: hsl(44, 54%, 54%);
+    --text-light: hsl(247, 30%, 30%);
+  }
+  * { margin:0; padding:0; box-sizing:border-box; }
+  body { background: var(--bg); color: var(--text); font-family: 'Jost', sans-serif; padding: 3rem 2rem; }
+  h1 { font-family: 'Cormorant Garamond', serif; font-size: 2rem; color: var(--primary); margin-bottom: 0.5rem; }
+  .subtitle { color: var(--text-light); margin-bottom: 3rem; font-size: 0.95rem; }
+  .grid { display: grid; grid-template-columns: 1fr 1fr; gap: 3rem; max-width: 1000px; margin: 0 auto; }
+  .card { background: white; padding: 3rem 2rem; text-align: center; border: 1px solid hsl(44, 30%, 82%); }
+  .card h2 { font-family: 'Cormorant Garamond', serif; font-size: 1.2rem; color: var(--primary); margin: 1.5rem 0 0.4rem; }
+  .card p { font-size: 0.8rem; color: var(--text-light); line-height: 1.7; max-width: 340px; margin: 0 auto; }
+  .card .tag { font-size: 0.65rem; text-transform: uppercase; letter-spacing: 0.1em; color: var(--secondary); margin-top: 0.75rem; }
+  svg { display: block; margin: 0 auto; }
+  @media (max-width: 700px) { .grid { grid-template-columns: 1fr; } }
+</style>
+</head>
+<body>
+<h1>Logo Concepts</h1>
+<p class="subtitle">10 mark-focused directions. All use the green/gold palette.</p>
+
+<div class="grid">
+
+<!-- 1: Shield with V&H -->
+<div class="card">
+  <svg width="160" height="140" viewBox="0 0 160 140">
+    <path d="M80 10 L140 35 L140 75 Q140 115 80 130 Q20 115 20 75 L20 35 Z" fill="none" stroke="hsl(155, 40%, 17%)" stroke-width="2"/>
+    <text x="58" y="80" font-family="'Inter', sans-serif" font-weight="600" font-size="28" fill="hsl(155, 40%, 17%)">V</text>
+    <text x="88" y="80" font-family="'Inter', sans-serif" font-weight="600" font-size="28" fill="hsl(155, 40%, 17%)">H</text>
+    <line x1="83" y1="58" x2="83" y2="88" stroke="hsl(44, 54%, 54%)" stroke-width="1.5"/>
+  </svg>
+  <h2>1 — The Shield</h2>
+  <p>Classic shield form with V and H separated by a gold vertical line. The shield means protection and trust. The gold divider is the "&" — the thing that holds them together.</p>
+  <p class="tag">Shield Mark</p>
+</div>
+
+<!-- 2: Overlapping V & H -->
+<div class="card">
+  <svg width="160" height="140" viewBox="0 0 160 140">
+    <g transform="translate(80, 65)">
+      <!-- V as two angled lines -->
+      <polygon points="-30,-35 -22,-35 0,25 -8,25" fill="hsl(155, 40%, 17%)"/>
+      <polygon points="10,-35 18,-35 -4,25 -12,25" fill="hsl(155, 40%, 17%)" opacity="0.7"/>
+      <!-- H overlapping -->
+      <rect x="8" y="-35" width="7" height="60" fill="hsl(155, 40%, 17%)"/>
+      <rect x="28" y="-35" width="7" height="60" fill="hsl(155, 40%, 17%)"/>
+      <rect x="8" y="-5" width="27" height="5.5" fill="hsl(44, 54%, 54%)"/>
+    </g>
+  </svg>
+  <h2>2 — Overlap</h2>
+  <p>The V and H letterforms overlap and interlock. Where they share space, the forms merge — strategy and humanity occupying the same ground. Gold crossbar on the H.</p>
+  <p class="tag">Interlocking Monogram</p>
+</div>
+
+<!-- 3: Two Columns with Keystone -->
+<div class="card">
+  <svg width="160" height="140" viewBox="0 0 160 140">
+    <g transform="translate(80, 70)">
+      <rect x="-24" y="-40" width="8" height="70" fill="hsl(155, 40%, 17%)"/>
+      <rect x="16" y="-40" width="8" height="70" fill="hsl(155, 40%, 17%)"/>
+      <!-- Keystone/arch connector -->
+      <path d="M-16 -40 Q0 -55 16 -40" fill="none" stroke="hsl(44, 54%, 54%)" stroke-width="2"/>
+      <!-- Base line -->
+      <line x1="-30" y1="32" x2="30" y2="32" stroke="hsl(44, 54%, 54%)" stroke-width="1"/>
+    </g>
+  </svg>
+  <h2>3 — The Arch</h2>
+  <p>Two columns joined by a gold arch — classical architecture that means structure, support, endurance. The arch can't stand without both columns. Neither value works alone.</p>
+  <p class="tag">Architectural Mark</p>
+</div>
+
+<!-- 4: Diamond with Ampersand -->
+<div class="card">
+  <svg width="160" height="140" viewBox="0 0 160 140">
+    <g transform="translate(80, 70)">
+      <polygon points="0,-45 45,0 0,45 -45,0" fill="none" stroke="hsl(155, 40%, 17%)" stroke-width="2"/>
+      <text x="0" y="12" text-anchor="middle" font-family="'Cormorant Garamond', serif" font-weight="600" font-size="40" fill="hsl(44, 54%, 54%)">&amp;</text>
+    </g>
+  </svg>
+  <h2>4 — The Diamond</h2>
+  <p>A rotated square (diamond) frames a gold ampersand. The diamond is a symbol of value, clarity, and precision. The "&" inside is the firm's identity distilled to its purest form.</p>
+  <p class="tag">Framed Ampersand</p>
+</div>
+
+<!-- 5: Scales of Truth -->
+<div class="card">
+  <svg width="160" height="140" viewBox="0 0 160 140">
+    <g transform="translate(80, 70)">
+      <!-- Central pillar -->
+      <line x1="0" y1="-40" x2="0" y2="35" stroke="hsl(155, 40%, 17%)" stroke-width="2.5"/>
+      <!-- Beam -->
+      <line x1="-40" y1="-30" x2="40" y2="-30" stroke="hsl(155, 40%, 17%)" stroke-width="2"/>
+      <!-- Left pan -->
+      <path d="M-40,-30 L-48,-10 L-32,-10 Z" fill="none" stroke="hsl(44, 54%, 54%)" stroke-width="1.5"/>
+      <!-- Right pan -->
+      <path d="M40,-30 L32,-10 L48,-10 Z" fill="none" stroke="hsl(44, 54%, 54%)" stroke-width="1.5"/>
+      <!-- Base -->
+      <line x1="-15" y1="35" x2="15" y2="35" stroke="hsl(155, 40%, 17%)" stroke-width="2"/>
+      <!-- V on left -->
+      <text x="-40" y="-14" text-anchor="middle" font-family="'Inter', sans-serif" font-weight="600" font-size="8" fill="hsl(155, 40%, 17%)">V</text>
+      <!-- H on right -->
+      <text x="40" y="-14" text-anchor="middle" font-family="'Inter', sans-serif" font-weight="600" font-size="8" fill="hsl(155, 40%, 17%)">H</text>
+    </g>
+  </svg>
+  <h2>5 — The Scales</h2>
+  <p>Scales of justice — Veritas literally means truth, and this is its oldest symbol. V and H sit in each pan, held in equal balance. Direct, legible, grounded in meaning.</p>
+  <p class="tag">Classical Symbol</p>
+</div>
+
+<!-- 6: Nested Circles -->
+<div class="card">
+  <svg width="160" height="140" viewBox="0 0 160 140">
+    <g transform="translate(80, 68)">
+      <!-- Outer circle -->
+      <circle cx="0" cy="0" r="45" fill="none" stroke="hsl(155, 40%, 17%)" stroke-width="2"/>
+      <!-- Inner circle -->
+      <circle cx="0" cy="0" r="28" fill="none" stroke="hsl(44, 54%, 54%)" stroke-width="1"/>
+      <!-- V and H stacked -->
+      <text x="0" y="-2" text-anchor="middle" font-family="'Inter', sans-serif" font-weight="600" font-size="18" letter-spacing="2" fill="hsl(155, 40%, 17%)">V&amp;H</text>
+      <line x1="-18" y1="6" x2="18" y2="6" stroke="hsl(44, 54%, 54%)" stroke-width="0.75"/>
+    </g>
+  </svg>
+  <h2>6 — The Seal</h2>
+  <p>Double-ring seal with V&H at center. Reads like a wax seal or institutional emblem — tradition, authority, something you'd stamp on a document you stand behind.</p>
+  <p class="tag">Seal Mark</p>
+</div>
+
+<!-- 7: Minimal Tree -->
+<div class="card">
+  <svg width="160" height="140" viewBox="0 0 160 140">
+    <g transform="translate(80, 72)">
+      <!-- Trunk -->
+      <line x1="0" y1="5" x2="0" y2="38" stroke="hsl(155, 40%, 17%)" stroke-width="3"/>
+      <!-- Two main branches splitting symmetrically -->
+      <line x1="0" y1="-5" x2="-22" y2="-32" stroke="hsl(155, 40%, 17%)" stroke-width="2.5"/>
+      <line x1="0" y1="-5" x2="22" y2="-32" stroke="hsl(155, 40%, 17%)" stroke-width="2.5"/>
+      <!-- Secondary branches -->
+      <line x1="-11" y1="-18" x2="-25" y2="-18" stroke="hsl(155, 40%, 17%)" stroke-width="1.5"/>
+      <line x1="11" y1="-18" x2="25" y2="-18" stroke="hsl(155, 40%, 17%)" stroke-width="1.5"/>
+      <line x1="-17" y1="-26" x2="-30" y2="-38" stroke="hsl(155, 40%, 17%)" stroke-width="1.5"/>
+      <line x1="17" y1="-26" x2="30" y2="-38" stroke="hsl(155, 40%, 17%)" stroke-width="1.5"/>
+      <!-- Gold root line -->
+      <line x1="-20" y1="38" x2="20" y2="38" stroke="hsl(44, 54%, 54%)" stroke-width="1.5"/>
+      <!-- Fork point — gold dot -->
+      <circle cx="0" cy="-5" r="3" fill="hsl(44, 54%, 54%)"/>
+    </g>
+  </svg>
+  <h2>7 — The Tree</h2>
+  <p>Minimal branching tree — one trunk splits into two equal branches. Growth from a single root. The gold dot at the fork is the decision point where strategy meets care. The gold base line is the grounding.</p>
+  <p class="tag">Organic Mark</p>
+</div>
+
+<!-- 8: Compass Rose -->
+<div class="card">
+  <svg width="160" height="140" viewBox="0 0 160 140">
+    <g transform="translate(80, 68)">
+      <!-- Four cardinal points -->
+      <line x1="0" y1="-40" x2="0" y2="40" stroke="hsl(155, 40%, 17%)" stroke-width="1.5"/>
+      <line x1="-40" y1="0" x2="40" y2="0" stroke="hsl(155, 40%, 17%)" stroke-width="1.5"/>
+      <!-- North pointer (filled triangle) -->
+      <polygon points="0,-40 -6,-20 6,-20" fill="hsl(155, 40%, 17%)"/>
+      <!-- Gold diagonal accents -->
+      <line x1="-10" y1="-10" x2="-24" y2="-24" stroke="hsl(44, 54%, 54%)" stroke-width="1"/>
+      <line x1="10" y1="-10" x2="24" y2="-24" stroke="hsl(44, 54%, 54%)" stroke-width="1"/>
+      <line x1="-10" y1="10" x2="-24" y2="24" stroke="hsl(44, 54%, 54%)" stroke-width="1"/>
+      <line x1="10" y1="10" x2="24" y2="24" stroke="hsl(44, 54%, 54%)" stroke-width="1"/>
+      <!-- Center circle -->
+      <circle cx="0" cy="0" r="5" fill="hsl(44, 54%, 54%)"/>
+    </g>
+  </svg>
+  <h2>8 — The Compass</h2>
+  <p>A compass rose — the firm helps organizations navigate change. The north arrow is direction and truth. Gold diagonals and center point add warmth. Means: we know where we're going.</p>
+  <p class="tag">Navigation Mark</p>
+</div>
+
+<!-- 9: Interlocking Squares -->
+<div class="card">
+  <svg width="160" height="140" viewBox="0 0 160 140">
+    <g transform="translate(80, 68)">
+      <!-- First square (slightly left and up) -->
+      <rect x="-32" y="-30" width="38" height="38" fill="none" stroke="hsl(155, 40%, 17%)" stroke-width="2"/>
+      <!-- Second square (slightly right and down) -->
+      <rect x="-6" y="-8" width="38" height="38" fill="none" stroke="hsl(155, 40%, 17%)" stroke-width="2"/>
+      <!-- Overlap area filled with gold -->
+      <rect x="-6" y="-8" width="12" height="16" fill="hsl(44, 54%, 54%)" opacity="0.35"/>
+    </g>
+  </svg>
+  <h2>9 — The Overlap</h2>
+  <p>Two squares that intersect — where they overlap, gold appears. Two distinct entities (truth and heart, strategy and care) creating something new where they meet. The gold intersection is the value the firm creates.</p>
+  <p class="tag">Geometric Mark</p>
+</div>
+
+<!-- 10: Horizon Line -->
+<div class="card">
+  <svg width="160" height="140" viewBox="0 0 160 140">
+    <g transform="translate(80, 68)">
+      <!-- Two angled lines meeting at horizon -->
+      <line x1="-45" y1="20" x2="0" y2="-15" stroke="hsl(155, 40%, 17%)" stroke-width="2.5" stroke-linecap="square"/>
+      <line x1="45" y1="20" x2="0" y2="-15" stroke="hsl(155, 40%, 17%)" stroke-width="2.5" stroke-linecap="square"/>
+      <!-- Horizon line -->
+      <line x1="-45" y1="20" x2="45" y2="20" stroke="hsl(44, 54%, 54%)" stroke-width="1"/>
+      <!-- Gold dot at apex -->
+      <circle cx="0" cy="-15" r="3.5" fill="hsl(44, 54%, 54%)"/>
+    </g>
+  </svg>
+  <h2>10 — The Apex</h2>
+  <p>Two converging lines meet at a gold point above a horizon. The upward convergence is two forces (truth and heart) arriving at the same destination. The horizon is the baseline — where the work happens. The gold apex is the outcome.</p>
+  <p class="tag">Convergence Mark</p>
+</div>
+
+</div>
+</body>
+</html>
