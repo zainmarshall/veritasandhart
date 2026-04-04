@@ -1,5 +1,4 @@
 <script lang="ts">
-	import { base } from '$app/paths';
 	import { reveal } from '$lib/reveal';
 	let { site }: { site: { name: string; suffix: string; tagline: string; positioning: string; cta: string } } = $props();
 </script>
@@ -10,7 +9,7 @@
 		<h1 class="reveal" use:reveal style="transition-delay: 150ms">{site.name}</h1>
 		<p class="hero-positioning reveal" use:reveal style="transition-delay: 300ms">{site.positioning}</p>
 		<div class="reveal" use:reveal style="transition-delay: 450ms">
-			<a href="{base}/contact" class="hero-cta">{site.cta}</a>
+			<a href="/contact" class="hero-cta">{site.cta}</a>
 		</div>
 	</div>
 </section>
