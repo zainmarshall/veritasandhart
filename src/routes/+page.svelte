@@ -6,6 +6,11 @@
 	import Sectors from '$lib/components/Sectors.svelte';
 </script>
 
+<svelte:head>
+	<title>Veritas & Hart — Management Consulting | Strategy, AI, Operations</title>
+	<meta name="description" content="Veritas & Hart partners with organizations navigating complex change — from strategy through execution — with senior-level attention, honest counsel, and genuine care." />
+</svelte:head>
+
 <Hero {site} />
 <Stats {stats} />
 
