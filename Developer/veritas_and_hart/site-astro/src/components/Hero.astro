@@ -1,0 +1,112 @@
+---
+interface Props {
+  site: { name: string; tagline: string; positioning: string; cta: string };
+}
+const { site } = Astro.props;
+---
+<section class="hero">
+  <svg class="contours" viewBox="0 0 1200 520" preserveAspectRatio="xMidYMid slice" aria-hidden="true">
+    <path d="M-40 430 C160 380 300 470 520 420 C740 370 900 460 1240 400" />
+    <path d="M-40 370 C180 320 320 400 540 355 C760 310 920 395 1240 335" />
+    <path d="M-40 310 C200 265 340 335 560 295 C780 255 940 330 1240 275" />
+    <path d="M-40 250 C220 210 360 270 580 235 C800 200 960 265 1240 215" />
+    <path d="M-40 190 C240 155 380 205 600 175 C820 145 980 200 1240 155" />
+  </svg>
+  <span class="ghost-amp" aria-hidden="true">&amp;</span>
+  <div class="hero-inner">
+    <p class="hero-tagline reveal">{site.tagline}</p>
+    <h1 class="reveal" style="transition-delay: 150ms">{site.name}</h1>
+    <p class="hero-positioning reveal" style="transition-delay: 300ms">{site.positioning}</p>
+    <div class="reveal" style="transition-delay: 450ms">
+      <a href="/contact" class="hero-cta">{site.cta}</a>
+    </div>
+  </div>
+</section>
+<style>
+  .hero {
+    position: relative;
+    padding: 8rem 2rem 7rem;
+    text-align: center;
+    overflow: hidden;
+  }
+  .contours {
+    position: absolute;
+    inset: 0;
+    width: 100%;
+    height: 100%;
+    pointer-events: none;
+  }
+  .contours path {
+    fill: none;
+    stroke: var(--primary);
+    stroke-width: 1;
+    opacity: 0.07;
+  }
+  .ghost-amp {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -54%);
+    font-family: 'Cormorant Garamond', serif;
+    font-style: italic;
+    font-size: 34rem;
+    line-height: 1;
+    color: var(--secondary);
+    opacity: 0.07;
+    pointer-events: none;
+    user-select: none;
+  }
+  .hero-inner {
+    position: relative;
+    max-width: 780px;
+    margin: 0 auto;
+  }
+  .hero-tagline {
+    font-size: 0.8rem;
+    font-weight: 400;
+    letter-spacing: 0.2em;
+    text-transform: uppercase;
+    color: var(--secondary);
+    margin-bottom: 2rem;
+  }
+  h1 {
+    font-family: 'Inter', sans-serif;
+    font-weight: 600;
+    letter-spacing: -0.01em;
+    margin-bottom: 2rem;
+  }
+  .hero-positioning {
+    font-size: 1.2rem;
+    line-height: 1.9;
+    color: var(--text-light);
+    max-width: 520px;
+    margin: 0 auto 3rem;
+  }
+  .hero-cta {
+    display: inline-block;
+    padding: 0.9rem 2.5rem;
+    background-color: var(--primary);
+    color: var(--background);
+    font-family: 'Jost', sans-serif;
+    font-size: 0.85rem;
+    font-weight: 400;
+    letter-spacing: 0.1em;
+    text-transform: uppercase;
+    text-decoration: none;
+    border: 1px solid var(--primary);
+    transition: background-color 0.3s, color 0.3s;
+  }
+  .hero-cta:hover {
+    background-color: transparent;
+    color: var(--primary);
+    text-decoration: none;
+  }
+  @media (max-width: 768px) {
+    .hero { padding: 6rem 1.5rem 5rem; }
+    .ghost-amp { font-size: 22rem; }
+  }
+  @media (max-width: 480px) {
+    .hero { padding: 5rem 1.25rem 4rem; }
+    .ghost-amp { font-size: 16rem; }
+  }
+</style>

@@ -1,0 +1,69 @@
+---
+import Layout from '../layouts/Layout.astro';
+import Hero from '../components/Hero.astro';
+import Stats from '../components/Stats.svelte';
+import Sectors from '../components/Sectors.astro';
+import { getEntry } from 'astro:content';
+
+const home = await getEntry('site', 'home');
+const statsEntry = await getEntry('site', 'stats');
+const sectorsEntry = await getEntry('site', 'sectors');
+
+const site = home.data as { name: string; tagline: string; positioning: string; cta: string; pullQuote: string };
+const stats = (statsEntry.data as { stats: { figure: string; label: string; context: string; detail: string }[] }).stats;
+const sectors = (sectorsEntry.data as { sectors: { name: string; detail: string }[] }).sectors;
+---
+
+<Layout
+  title="Veritas & Hart, Management Consulting | Strategy, AI, Operations"
+  description="Veritas & Hart partners with organizations navigating complex change, from strategy through execution, with senior-level attention, honest counsel, and genuine care."
+>
+  <Hero {site} />
+  <Stats {stats} client:visible />
+
+  <div class="pull-quote reveal">
+    <span class="amp-mark" aria-hidden="true">&amp;</span>
+    <blockquote>{site.pullQuote}</blockquote>
+    <a class="quote-link" href="/case-studies">Read the case studies</a>
+  </div>
+
+  <Sectors {sectors} />
+</Layout>
+
+<style>
+  .pull-quote {
+    padding: 5rem 2rem;
+    text-align: center;
+  }
+  blockquote {
+    font-family: 'Cormorant Garamond', serif;
+    font-style: italic;
+    font-size: 2.4rem;
+    color: var(--primary);
+    line-height: 1.3;
+    max-width: 700px;
+    margin: 0 auto;
+    position: relative;
+  }
+  .amp-mark {
+    display: block;
+    font-family: 'Cormorant Garamond', serif;
+    font-style: italic;
+    font-size: 2.6rem;
+    line-height: 1;
+    color: var(--secondary);
+    margin-bottom: 1.25rem;
+  }
+  @media (max-width: 768px) {
+    blockquote { font-size: 1.8rem; }
+    .pull-quote { padding: 4rem 1.5rem; }
+  }
+  .quote-link {
+    display: inline-block;
+    margin-top: 1.75rem;
+    font-size: 0.8rem;
+    letter-spacing: 0.08em;
+    text-transform: uppercase;
+    color: var(--secondary);
+  }
+</style>

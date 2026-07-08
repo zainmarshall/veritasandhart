@@ -1,0 +1,88 @@
+---
+import Layout from '../../layouts/Layout.astro';
+import CaseStudyMark from '../../components/CaseStudyMark.astro';
+import { getCollection } from 'astro:content';
+
+const allStudies = await getCollection('case-studies', ({ data }) => data.published);
+const studies = allStudies.sort((a, b) => a.data.number - b.data.number);
+
+const intro = {
+  heading: "The work behind Veritas & Hart",
+  paragraphs: [
+    "Veritas & Hart is a young firm. Most of the work described here predates it: two and a half decades inside Marriott, Amazon, and other large organizations, leading the kinds of programs I now advise on. One study comes from a current advisory engagement and is anonymized to protect the client.",
+    "I share these because the pattern matters more than the logo. Strategy rarely fails on paper. It fails in execution, and it fails in ways the organization cannot yet see, because the measurement, the operating cadence, or the trust needed to see clearly is missing. Building those is the work.",
+    "A note on the numbers. Where a result had many causes, I say so. Where a figure came from a vendor's measurement or a model rather than an audit, I say that too. I would rather you trust the caveats than admire the claims."
+  ]
+};
+---
+<Layout
+  title="Case Studies | Veritas & Hart"
+  description="Eleven case studies from 25 years of transformation and operating work: portfolio turnarounds, measurement systems, transformation at scale, and talent strategy. With honest caveats."
+>
+  <section class="section">
+    <div class="divider"></div>
+    <h2>{intro.heading}</h2>
+
+    {intro.paragraphs.slice(0, 2).map(p => <p class="intro-para">{p}</p>)}
+
+    <div class="note reveal">{intro.paragraphs[2]}</div>
+
+    <div class="ledger">
+      {studies.map((study, i) => (
+        <a class="row reveal" href={`/case-studies/${study.id}`}>
+          <span class="row-num">{String(i + 1).padStart(2, '0')}</span>
+          <span class="row-main">
+            <span class="row-title">{study.data.title}</span>
+            <span class="row-problem">{study.data.problem}</span>
+          </span>
+          <span class="row-mark"><CaseStudyMark slug={study.id} size={34} /></span>
+        </a>
+      ))}
+    </div>
+  </section>
+</Layout>
+
+<style>
+  .intro-para { max-width: 46rem; }
+  .note {
+    border-left: 2px solid var(--secondary);
+    background-color: hsl(44, 45%, 88%);
+    padding: 1.5rem 1.75rem;
+    margin: 2.5rem 0 3.5rem;
+    max-width: 46rem;
+    color: var(--text-light);
+    font-size: 0.95rem;
+  }
+  .ledger { border-top: 1px solid var(--border); }
+  .row {
+    display: grid;
+    grid-template-columns: 3rem 1fr 3rem;
+    gap: 1.25rem;
+    align-items: baseline;
+    padding: 1.5rem 0;
+    border-bottom: 1px solid var(--border);
+    text-decoration: none;
+  }
+  .row:hover { text-decoration: none; }
+  .row:hover .row-title { color: var(--secondary); }
+  .row-num {
+    font-family: 'Cormorant Garamond', serif;
+    font-size: 1.2rem;
+    color: var(--secondary);
+  }
+  .row-main { display: flex; flex-direction: column; gap: 0.3rem; }
+  .row-title {
+    font-family: 'Cormorant Garamond', serif;
+    font-size: 1.35rem;
+    font-weight: 600;
+    line-height: 1.25;
+    color: var(--primary);
+    transition: color 0.2s ease;
+  }
+  .row-problem { font-size: 0.9rem; color: var(--text-light); }
+  .row-mark { opacity: 0.75; transition: opacity 0.2s ease; }
+  .row:hover .row-mark { opacity: 1; }
+  @media (max-width: 768px) {
+    .row { grid-template-columns: 2.4rem 1fr 2.4rem; }
+  }
+</style>

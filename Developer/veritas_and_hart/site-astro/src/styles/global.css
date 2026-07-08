@@ -1,0 +1,140 @@
+/* ── Color Palette ── */
+:root {
+	--text: hsl(247, 75%, 5%);
+	--background: hsl(42, 50%, 92%);
+	--primary: hsl(155, 40%, 17%);
+	--secondary: hsl(44, 54%, 54%);
+
+	--text-light: hsl(247, 30%, 30%);
+	--border: hsl(44, 30%, 78%);
+}
+
+/* ── Reset ── */
+*,
+*::before,
+*::after {
+	margin: 0;
+	padding: 0;
+	box-sizing: border-box;
+}
+
+html {
+	font-size: 18px;
+	scroll-behavior: smooth;
+	-webkit-font-smoothing: antialiased;
+}
+
+body {
+	font-family: 'Jost', sans-serif;
+	color: var(--text);
+	background-color: var(--background);
+	line-height: 1.7;
+}
+
+/* ── Typography ── */
+h1, h2, h3, h4 {
+	font-family: 'Cormorant Garamond', serif;
+	font-weight: 600;
+	line-height: 1.15;
+	color: var(--primary);
+}
+
+h1 {
+	font-size: 4rem;
+	letter-spacing: -0.02em;
+}
+
+h2 {
+	font-size: 2.6rem;
+	margin-bottom: 1.5rem;
+}
+
+h3 {
+	font-size: 1.5rem;
+	margin-bottom: 0.75rem;
+}
+
+p {
+	margin-bottom: 1rem;
+	color: var(--text-light);
+	font-size: 1.05rem;
+}
+
+a {
+	color: var(--primary);
+	text-decoration: none;
+}
+
+a:hover {
+	text-decoration: underline;
+}
+
+/* ── Layout ── */
+main {
+	padding-top: 4.5rem;
+}
+
+.section {
+	padding: 6rem 2rem 7rem;
+	max-width: 1000px;
+	margin: 0 auto;
+}
+
+.section-full {
+	padding: 6rem 2rem 7rem;
+}
+
+/* ── Utilities ── */
+.accent {
+	color: var(--secondary);
+}
+
+.divider {
+	width: 48px;
+	height: 2px;
+	background-color: var(--secondary);
+	margin-bottom: 2.5rem;
+}
+
+/* ── Scroll Reveal ── */
+.reveal {
+	opacity: 0;
+	transform: translateY(24px);
+	transition: opacity 0.7s ease, transform 0.7s ease;
+}
+
+.reveal.visible {
+	opacity: 1;
+	transform: translateY(0);
+}
+
+/* ── Responsive ── */
+@media (max-width: 768px) {
+	html {
+		font-size: 16px;
+	}
+
+	h1 {
+		font-size: 2.8rem;
+	}
+
+	h2 {
+		font-size: 2rem;
+	}
+
+	.section,
+	.section-full {
+		padding: 4rem 1.5rem 5rem;
+	}
+}
+
+@media (max-width: 480px) {
+	h1 {
+		font-size: 2.2rem;
+	}
+
+	.section,
+	.section-full {
+		padding: 3rem 1.25rem 4rem;
+	}
+}

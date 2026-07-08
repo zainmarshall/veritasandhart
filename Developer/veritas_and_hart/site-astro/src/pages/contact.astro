@@ -1,0 +1,14 @@
+---
+import Layout from '../layouts/Layout.astro';
+import Contact from '../components/Contact.astro';
+import { getEntry } from 'astro:content';
+
+const entry = await getEntry('site', 'contact');
+const contact = entry.data as { heading: string; body: string; email: string; location: string };
+---
+<Layout
+  title="Contact — Veritas & Hart | Start a Conversation"
+  description="Whether you have a defined problem or an emerging one, the best next step is a conversation. Washington, D.C. Metro Area."
+>
+  <Contact {contact} />
+</Layout>
