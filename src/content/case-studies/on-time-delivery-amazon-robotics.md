@@ -1,5 +1,5 @@
 ---
-title: "When heroics stop working: reaching 99.5 percent on-time delivery at Amazon Robotics"
+title: "When heroics stop working: reaching 99.5 percent on-time delivery at Amazon Robotics - Test 123"
 number: 1
 published: true
 tags: ["Portfolio turnaround", "KPI architecture", "Operating cadence"]
