@@ -1,0 +1,81 @@
+---
+interface Pillar {
+  title: string;
+  problem: string;
+  description: string;
+  proof: string[];
+}
+
+interface StudyRef {
+  slug: string;
+  title: string;
+}
+
+interface Props {
+  services: { heading: string; intro: string; pillars: Pillar[] };
+  caseStudies: StudyRef[];
+}
+
+const { services, caseStudies } = Astro.props;
+
+function proofLinks(slugs: string[]) {
+  return slugs.map(slug => caseStudies.find(s => s.slug === slug)).filter(Boolean) as StudyRef[];
+}
+---
+<section class="section">
+  <div class="reveal">
+    <div class="divider"></div>
+    <h2>{services.heading}</h2>
+    <p class="intro">{services.intro}</p>
+  </div>
+  <div class="pillars">
+    {services.pillars.map((pillar, i) => {
+      const links = proofLinks(pillar.proof);
+      return (
+        <div class="pillar reveal" style={`transition-delay: ${i * 100}ms`}>
+          <p class="problem">&ldquo;{pillar.problem}&rdquo;</p>
+          <h3>{pillar.title}</h3>
+          <p>{pillar.description}</p>
+          {links.length > 0 && (
+            <p class="proof">
+              <span class="proof-label">Proof:</span>
+              {links.map((study, j) => (
+                <Fragment>
+                  <a href={`/case-studies/${study.slug}`}>{study.title.split(':')[0]}</a>
+                  {j < links.length - 1 && <span class="sep"> · </span>}
+                </Fragment>
+              ))}
+            </p>
+          )}
+        </div>
+      );
+    })}
+  </div>
+</section>
+<style>
+  .intro { max-width: 680px; margin-bottom: 3.5rem; font-size: 1.05rem; }
+  .pillars { display: grid; grid-template-columns: 1fr; gap: 3.5rem; }
+  .pillar { border-left: 2px solid var(--secondary); padding-left: 2rem; }
+  .pillar p { max-width: 600px; }
+  .problem {
+    font-family: 'Cormorant Garamond', serif;
+    font-style: italic;
+    font-size: 1.4rem;
+    color: var(--primary);
+    margin-bottom: 0.5rem;
+    line-height: 1.35;
+  }
+  .proof { margin-top: 0.75rem; font-size: 0.9rem; color: var(--text-light); }
+  .proof-label {
+    font-size: 0.72rem;
+    letter-spacing: 0.08em;
+    text-transform: uppercase;
+    color: var(--secondary);
+    margin-right: 0.4rem;
+  }
+  .proof a { color: var(--primary); }
+  .sep { color: var(--border); }
+  @media (max-width: 480px) {
+    .pillar { padding-left: 1.25rem; }
+  }
+</style>

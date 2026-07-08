@@ -1,0 +1,11 @@
+sectors:
+  - name: "Technology"
+    detail: "Enterprise AI strategy, governance frameworks, and scaled adoption programs for technology organizations navigating rapid change."
+  - name: "Hospitality"
+    detail: "Digital platform transformation and operational redesign across global property portfolios, aligning technology investment with guest experience."
+  - name: "Healthcare"
+    detail: "Strategic program leadership for healthcare organizations modernizing operations, compliance infrastructure, and patient-facing systems."
+  - name: "Robotics"
+    detail: "Operational infrastructure and deployment strategy for robotics at scale, from fulfillment network design to cross-functional program execution."
+  - name: "Financial Services"
+    detail: "Revenue acceleration, KPI architecture, and organizational design for financial institutions balancing growth with regulatory rigor."

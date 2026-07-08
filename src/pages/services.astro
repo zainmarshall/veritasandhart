@@ -1,0 +1,23 @@
+---
+import Layout from '../layouts/Layout.astro';
+import Services from '../components/Services.astro';
+import { getEntry, getCollection } from 'astro:content';
+
+const entry = await getEntry('site', 'services');
+const services = entry.data as {
+  heading: string;
+  intro: string;
+  pillars: { title: string; problem: string; description: string; proof: string[] }[];
+};
+
+const allStudies = await getCollection('case-studies', ({ data }) => data.published);
+const caseStudies = allStudies
+  .sort((a, b) => a.data.number - b.data.number)
+  .map(s => ({ slug: s.id, title: s.data.title }));
+---
+<Layout
+  title="Services | Veritas & Hart"
+  description="Execution turnarounds, measurement and KPI architecture, transformation and adoption at scale, and talent and capability strategy. Each anchored to published case studies."
+>
+  <Services {services} {caseStudies} />
+</Layout>

@@ -1,0 +1,32 @@
+heading: "Four Problems I Am Asked to Solve"
+intro: "Engagements are shaped around the problem as you would say it, not a pre-packaged offering. Each one is anchored to case studies you can read on this site."
+pillars:
+  - title: "Execution Turnaround"
+    problem: "Commitments keep slipping and nobody can explain why."
+    description: "A short diagnostic that locates the real constraint through data, shadowing, and root cause work, then the visibility, ownership, and operating cadence to act on it. Built so it keeps running after the engagement ends."
+    proof:
+      - "on-time-delivery-amazon-robotics"
+      - "portfolio-adoption-48-to-90"
+      - "service-level-stalemate"
+  - title: "Measurement & KPI Architecture"
+    problem: "Dashboards everywhere, trust nowhere."
+    description: "Measurement design leaders can stand behind: single sources of truth, leading and lagging indicator frameworks, governance, and instrumentation that keeps the data honest over time."
+    proof:
+      - "resource-discipline-amazon-robotics"
+      - "single-source-of-truth"
+      - "marriott-analytics-maturity"
+      - "gaylord-national-turnaround"
+  - title: "Transformation & Adoption at Scale"
+    problem: "The strategy is right. The rollout is struggling."
+    description: "Field level diagnosis of why adoption is stalling, the hard sequencing calls, and the stakeholder cadence that builds trust while the program scales. From enterprise platforms to AI adoption and the governance to scale it responsibly. Change management as an operating discipline, not a communications plan."
+    proof:
+      - "marriott-cloud-point-of-sale"
+      - "portfolio-adoption-48-to-90"
+      - "gaylord-national-turnaround"
+  - title: "Talent & Capability Strategy"
+    problem: "The plan assumes talent the organization cannot yet see, attract, or grow."
+    description: "Skill level diagnostics, benchmarking and job architecture, workforce planning pilots proven before they scale, and the leader capability to sustain all of it."
+    proof:
+      - "fortune-100-talent-strategy"
+      - "rebuilding-analytical-capability"
+      - "developing-leaders-at-a-distance"
